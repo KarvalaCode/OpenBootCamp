@@ -1,0 +1,8 @@
+Gato:Sam
+Perro:Kai
+Tortuga:Lex
+Hurón:Peter
+Loro:Lion
+Tortuga:Lara
+Hámster:Misha
+Periquito:Pablo
