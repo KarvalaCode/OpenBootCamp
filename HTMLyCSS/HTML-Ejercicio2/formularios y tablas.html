@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario y Tabla</title>
+</head>
+
+<body>
+    <form id="formulario1" method="post" style="border: 1px #000 solid; margin:30px; padding:30px; background-color:#f2f2f2">
+        <h2>Formulario</h2>
+        <fieldset>
+            <legend> Introduce los datos de tu biblioteca</legend>   
+            <div>
+                <p></p>
+                <label for="nombre">Nombre: </label>
+                <input id="f1_nombre" name="nombre" type="text" placeholder="Aquí tu nombre">
+                <p></p>
+                <label for="Apellidos">Apellidos: </label>
+                <input id="f1_apellidos" name="apellidos" type="text" placeholder="Aquí tus apellidos">
+                <p></p>
+                <label for="email">E-mail: </label>
+                <input id="f1_email" name="email" type="email" placeholder="Aquí tu e-mail">
+                <p></p>
+                <label for="telefono">Teléfono: </label>
+                <input type="tel" id="f1_telefono" name="telefono" placeholder="Aquí tu teléfono">
+                <p></p>
+                <label for="direccion">Dirección: </label>
+                <input type="text" id="f1_direccion" name="direccion" placeholder="Aquí tu dirección">
+                <p></p>
+                <input id="f1_submit" name="submit" type="submit" value="Enviar formulario">
+            </div>
+        </fieldset>
+    </form>
+
+    <table class="default" border="1">
+        <h2>Tabla</h2>
+            <thead>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>    
+                </tr>
+            </thead>
+            <tbody> 
+                <tr>
+                    <th>1</th>
+                    <td>2</td>
+                    <td colspan="2">3 doble</td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td rowspan="2">2 doble</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </tbody>        
+    </table>
+</body>

@@ -1,0 +1,49 @@
+*{
+    background-color: rgb(119, 119, 117);
+}
+
+.galeria{
+    height: 500px;
+    width: 380px;
+    margin: 1em auto;
+    border: 3px solid #555;
+    position: relative;
+}
+
+.galeria img{
+    position: absolute;
+    display: block;
+    margin-left: 68px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+h2{
+    text-align: center;
+    font-family: cursive;
+    font-size: 30px;
+    color: rgb(26, 26, 26);
+}
+
+
+.galeria input[type=radio]{
+    position: relative;
+    top: 325px;
+    margin-left: 65px;
+}
+
+.galeria input[type=radio]:nth-of-type(1):checked ~ img:nth-of-type(1) {
+    opacity: 1;
+}
+
+.galeria input[type=radio]:nth-of-type(2):checked ~ img:nth-of-type(2) {
+    opacity: 1;
+}
+
+.galeria input[type=radio]:nth-of-type(3):checked ~ img:nth-of-type(3) {
+    opacity: 1;
+}
+
+.galeria input[type=radio]:nth-of-type(4):checked ~ img:nth-of-type(4) {
+    opacity: 1;
+}
