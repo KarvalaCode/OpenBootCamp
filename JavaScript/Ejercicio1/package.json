@@ -1,0 +1,12 @@
+{
+  "name": "js-ejercicio1",
+  "version": "1.0.0",
+  "description": "Ejercicio 1 del curso de JavaScript básico de Open BootCamp",
+  "main": "index.js",
+  "scripts": {
+    "hola":"node hola.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Karvala",
+  "license": "ISC"
+}
