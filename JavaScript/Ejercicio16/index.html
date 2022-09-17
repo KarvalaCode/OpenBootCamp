@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drag and Drop</title>
+</head>
+<!-- - Replica el ejercicio completo del vídeo
+- Añade dos párrafos más en cada una de las secciones
+- Pon un icono de papelera para eliminar párrafos (Esta imagen puede valer: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSMWeEC0tULzOjfWFAOdOHjUw9WjXhBDbirg&usqp=CAU)
+- Añade el código necesario para que al arrastrar un fragmento del puzzle a la papelera, éste se elimine -->
+<body>
+    <div class="seccion">
+        <div class="cuadrado" draggable="true" id="1">1</div>
+        <div class="cuadrado" draggable="true" id="2">2</div>
+        <div class="cuadrado" draggable="true" id="3">3</div>
+        <div class="cuadrado" draggable="true" id="4">4</div>
+    </div>
+    <div class="seccion">
+        <div class="cuadrado" draggable="true" id="5">5</div>
+        <div class="cuadrado" draggable="true" id="6">6</div>
+        <div class="cuadrado" draggable="true" id="7">7</div>
+        <div class="cuadrado" draggable="true" id="8">8</div>
+    </div>
+
+    <img class="papelera" id="papelera" src="papelera.jpg"/>
+
+<script src="index.js"></script>    
+</body>
+</html>
