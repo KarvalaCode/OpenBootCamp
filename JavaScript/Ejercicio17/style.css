@@ -14,7 +14,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: lightsalmon;
+    background-color: #8AB4F8;
   }
 
   h1{
@@ -22,7 +22,6 @@
     font-size: 50px;
     font-weight:500;
     padding:20px 50px;
-    color: lightsalmon;
-    background-color: blueviolet;
+    color: #94D2A5;
   }
   
