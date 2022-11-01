@@ -1,0 +1,13 @@
+# Escribe una función que pueda decirte si un año (número entero) es bisiesto o no.
+
+def isBisisesto(year):
+    # Los años bisisestos son divisibles por 4 y no lo son por 100, excepto los que son divisibles por 400.
+
+    div4 = year%4
+    div100 = year%100
+    div400 = year%400
+
+    if div4 == 0 and (div100 != 0 or div400 == 0):
+        print(str(year) + " es un año bisiesto")
+    else:
+        print(str(year) + " no es un año bisisesto")
