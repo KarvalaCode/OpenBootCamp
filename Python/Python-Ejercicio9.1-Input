@@ -1,0 +1,15 @@
+# Crea un script que le pida al usuario una lista de países
+# (separados por comas). Estos se deben almacenar en una lista.
+# No debería haber países repetidos (haz uso de set).
+# Finalmente, muestra por consola
+# la lista de países ordenados alfabéticamente y separados por comas.
+
+input_paises = input("Escribe una lista de países separados por comas\n")
+
+paises = [pais for pais in input_paises.split(",")]
+
+lista_paises = (", ".join(sorted(set(paises))))
+
+
+print(lista_paises)
+
