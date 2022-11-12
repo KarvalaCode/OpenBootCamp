@@ -1,0 +1,20 @@
+# Crear un archivo py donde creéis un archivo txt, lo abráis
+# y escribáis dentro del archivo.
+# Para ello, tendréis que acceder dos veces al archivo creado.
+
+#Crea un archivo nuevo y se escribe en él.
+archivo = open('archivo.txt', 'x')
+archivo.write('Mi primer archivo escrito desde Python\n')
+archivo.close()
+
+#Se abre el archivo para seguir escribiendo.
+archivo = open('archivo.txt', 'a')
+archivo.write('Vuelvo a escribir\n')
+archivo.close()
+
+#Se vuielve a abrir el archivo para leerlo.
+archivo = open('archivo.txt', 'r')
+lectura = archivo.readlines()
+archivo.close()
+
+print(lectura)
