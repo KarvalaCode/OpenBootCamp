@@ -1,0 +1,16 @@
+# Crear una aplicación que obtendrá los elementos impares de una lista pasada por parámetro
+# con filter y realizará una suma de todos estos elementos obtenidos mediante reduce.
+from functools import reduce
+
+#Creamos un alista del 1 al 10
+lista = [num for num in range(1, 11)]
+
+#filtramos los impares de esa lista
+lista_impares = list(filter(lambda x: x%2 != 0, lista))
+
+#Sumamos todos los numeros de la lista de impares.
+suma_impares = reduce(lambda x, y: x+y, lista_impares)
+
+print(lista_impares)
+print(suma_impares)
+
