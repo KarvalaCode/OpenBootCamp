@@ -1,0 +1,34 @@
+# Crear un archivo py y dentro una clase Vehículo,
+# haréis un objeto de ella,
+# lo guardaréis en un archivo y luego lo cargamos.
+
+from pickle import *
+
+class Vehiculo:
+    color = ""
+    ruedas = 0
+    puertas = 0
+
+    def __init__(self, color, ruedas, puertas):
+        self.color = color
+        self.ruedas = ruedas
+        self.puertas = puertas
+
+    def __str__(self):
+        return f"El coche es de color {self.color}, tiene {self.ruedas} ruedas y {self.puertas} puertas"
+
+
+coche = Vehiculo ("amarillo", 4, 5)
+
+archivo = open('coche.txt', 'w+b')
+
+#Ponemos el objeto coche en el archivo
+dump(coche, archivo)
+
+#Devolvemos el puntero al inicio del archivo
+archivo.seek(0)
+
+#Cargamos el archivo para leerlo
+cargar = load(archivo)
+print(cargar)
+archivo.close()
