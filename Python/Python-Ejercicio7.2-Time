@@ -1,0 +1,26 @@
+# Crear un script que nos diga si es la hora de ir a casa.
+# Tendréis que hacer uso del módulo time. Necesitaréis la fecha del sistema
+# y poder comprobar la hora.
+# En el caso de que sean más de las 7, se mostrará un mensaje y en caso contrario,
+# haréis una operación para calcular el tiempo que queda de trabajo.
+
+import time
+
+# El módulo Time devuelve la hora en segundos desde epoch (1 enero 1970)
+segundos_actual = time.time()
+
+#Lo convertimos a la fecha de hoy
+fecha_actual = time.ctime(segundos_actual)
+
+#Buscamos la hora y los minutos en este momento
+hora_actual = time.localtime(segundos_actual).tm_hour
+minutos_actual = time.localtime(segundos_actual).tm_min
+
+#Buscamos la diferencia entre la hora actual y las 18.59h
+horas_trabajo = 18 - hora_actual
+minutos_trabajo = 59 - minutos_actual
+
+if hora_actual >= 19:
+    print("Buen trabajo por hoy. Es hora de irte a casa")
+else:
+    print("Ya casi lo tienes, solo quedan {} horas y {} minutos de trabajo por hoy".format(horas_trabajo, minutos_trabajo))
