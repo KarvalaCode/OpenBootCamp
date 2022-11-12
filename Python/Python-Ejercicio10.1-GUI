@@ -1,0 +1,43 @@
+# Crear una lista de RadioButton que muestre la opción
+# que se ha seleccionado y que contenga un botón de reinicio
+# para que deje todo como al principio.
+#
+# Al principio no tiene que haber una opción seleccionada.
+
+from tkinter import *
+
+#Creamos un tkinter
+gui = Tk()
+
+#Indicamos que las variables van a ser de tipo String
+var = StringVar()
+
+#Inicialmente no habrá ninguna variable seleccionada
+var.set(None)
+
+3Creamos una función para seleccionar las diferentes opciones
+def selecionar():
+    var.get()
+
+#Creamos las opciones
+Radiobutton(gui, text="Opcion 1", variable=var,
+            value="Opcion 1", command=selecionar).pack(anchor=W)
+
+Radiobutton(gui, text="Opcion 2", variable=var,
+            value="Opcion 2", command=selecionar).pack(anchor=W)
+
+Radiobutton(gui, text="Opcion 3", variable=var,
+            value="Opcion 3", command=selecionar).pack(anchor=W)
+
+Radiobutton(gui, text="Opcion 4", variable=var,
+            value="Opcion 4", command=selecionar).pack(anchor=W)
+
+#Función para reiniciar la sellección
+def reinicio():
+    var.set(None)
+
+#Boton para reiniciar
+Button(gui, text="Reinicio", command=reinicio()).pack()
+
+#Se crea un loop infinito para mantener la aplicaicón abierta.
+gui.mainloop()
