@@ -1,0 +1,26 @@
+# Crear una interfaz sencilla la cual debe de contener una lista de elementos seleccionables,
+# también debe de tener un label con el texto que queráis.
+
+from tkinter import *
+
+# Creamos la ventana y su tamaño.
+root = Tk()
+root.geometry("400x250")
+
+# Creamos el objeto listbox.
+lista = Listbox(root, height=5, width=30, bg="darkviolet", justify=CENTER, font="Calibri", fg="yellow")
+
+# Creamos la etiqueta del título.
+label = Label (root, text="\nMis Podcast\n", font="Calibri", bd="5")
+
+# Añadimos elementos a la lista
+lista.insert(1, "El Bombo de Karvala")
+lista.insert(2, "Hasta Aquí Puedo ver")
+lista.insert(3, "Izartxo GE-AMPA")
+lista.insert(4, "Racing Formula")
+
+label.pack()
+lista.pack()
+
+# Mantenemos la aplicación abierta hasta que se cierre la ventana.
+root.mainloop()
