@@ -1,0 +1,35 @@
+# Crear una tabla llamada Alumnos que constará de tres columnas:
+# la columna id de tipo entero, la columna nombre que será de tipo texto y la columna apellido que también será de tipo texto.
+# Una vez creada la tabla, tenéis que insertarle datos, como mínimo tenéis que insertar 8 alumnos a la tabla.
+# Por último, tienes que realizar una búsqueda de un alumno por nombre y mostrar los datos por consola.
+
+import sqlite3
+
+#Abrimos la base de datos
+conn = sqlite3.connect('Tabla.db')
+
+#creamos el cursor (iterador que irá teneimdo la info que queremos en cada momento)
+cursor = conn.cursor()
+
+# Creamos la tabla Alumnos
+cursor.execute("CREATE TABLE Alumnos(Id INT, Nombre TEXT, Apellido TEXT)")
+
+#Insertamos los datos
+cursor.execute("INSERT INTO Alumnos VALUES(1,'Laura', 'Aretxabaleta')")
+cursor.execute("INSERT INTO Alumnos VALUES(2,'Inés', 'Pérez')")
+cursor.execute("INSERT INTO Alumnos VALUES(3,'Sara', 'Gómez')")
+cursor.execute("INSERT INTO Alumnos VALUES(4,'Paco', 'Rodríguez')")
+cursor.execute("INSERT INTO Alumnos VALUES(5,'Lorena', 'Pasqual')")
+cursor.execute("INSERT INTO Alumnos VALUES(6,'María', 'Sanchez')")
+cursor.execute("INSERT INTO Alumnos VALUES(7,'Ander', 'García')")
+cursor.execute("INSERT INTO Alumnos VALUES(8,'Jordi', 'Colom')")
+
+conn.commit()
+
+cursor.execute("SELECT * FROM Alumnos WHERE Nombre = 'Ander'")
+rows = cursor.fetchall()
+print(rows)
+
+
+cursor.close()
+conn.close()
