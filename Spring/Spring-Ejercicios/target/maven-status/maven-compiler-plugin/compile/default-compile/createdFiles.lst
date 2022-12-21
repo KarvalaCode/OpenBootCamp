@@ -1,6 +1,0 @@
-com\example\SpringEjercicio4\entities\Laptop.class
-com\example\SpringEjercicio4\SpringEjercicio4Application.class
-com\example\SpringEjercicio4\controllers\HelloController.class
-com\example\SpringEjercicio4\repositories\LaptopRepository.class
-com\example\SpringEjercicio4\config\SwaggerConfig.class
-com\example\SpringEjercicio4\controllers\LaptopController.class
